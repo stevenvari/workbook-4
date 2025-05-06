@@ -35,4 +35,25 @@ public class Employee {
     public double getHoursWorked() {
         return hoursWorked;
     }
+    public double getRegularHours(){
+       if (hoursWorked > 40){
+           return 40;
+       }else {
+           return 0;
+       }
+    }
+    public double getOverTimeHours(){
+       if (hoursWorked > 40){
+           return hoursWorked - 40;
+       }else {
+           return 0;
+       }
+    }
+    public double getTotalPay(){
+        double regularPay = getHoursWorked() * payRate;
+
+        double overTimePay = getHoursWorked() * payRate * 1.5;
+
+        return regularPay + overTimePay;
+    }
 }
