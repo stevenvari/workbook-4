@@ -47,14 +47,22 @@ public class Reservation {
     }
 
     public double getReservationTotal() {
-         double reservationTotal = 0;
-         if (this.roomType.equals("King")) {
-             this.price = 139.00;
-         } else if (this.roomType.equals("Double")) {
-             this.price = 124.00;
-         } else {
-             throw new IllegalArgumentException("Invalid room type. try again");
-         }
-        return reservationTotal;
+         return price * numberOfNights;
+    }
+    private void updatePriceForWeekends(){
+        if (roomType == null) return;
+
+        if (this.roomType.equals("King")) {
+            this.price = 139.00 * 1.10;
+        } else if (this.roomType.equals("Double")) {
+            this.price = 124.00 * 1.10;
+        } else {
+            if (roomType.equals("king")){
+                this.price = 139;
+            } else if (roomType.equals("double")) {
+                this.price = 124;
+            }
+
+        }
     }
 }
