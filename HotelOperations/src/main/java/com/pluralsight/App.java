@@ -21,7 +21,7 @@ public class App {
 
         System.out.println();
 
-        Employee employee1 = new Employee(5555,"steven vargas","guest services",20,48);
+        Employee employee1 = new Employee(5555,"steven vargas ","guest services",20,48);
         System.out.println("EmployeeId: " + employee1.getEmployeeId());
         System.out.println("Name: " + employee1.getName());
         System.out.println("Department: " + employee1.getDepartment());
@@ -31,6 +31,15 @@ public class App {
         System.out.println("total pay: $" + employee1.getTotalPay());
 
         System.out.println();
+
+
+
+
+
+
+
+
+
 
 
 
